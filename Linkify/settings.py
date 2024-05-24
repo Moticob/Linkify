@@ -45,11 +45,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "main.apps.MainConfig",
     "django.contrib.sites",  # Required by allauth
-    "main.apps.MainConfig",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
+
 ]
 
 MIDDLEWARE = [
