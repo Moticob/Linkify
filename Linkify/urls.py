@@ -14,10 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from main.views import url_shortener
+from django.urls import path, include
+from main.views import url_shortener, signup
+from allauth.account.views import LoginView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", url_shortener, name="url-shortener"),
+    path('accounts/', include('allauth.urls')),  # Utilisation des URLs d'Allauth
+    path('accounts/signup/', signup, name='signup'),
+    path('accounts/login/', LoginView.as_view(), name='login'),
 ]
