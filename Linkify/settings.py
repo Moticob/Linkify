@@ -25,11 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
 SECRET_KEY = "django-insecure-i&p4#b&64avknk5ggo#r^wia9_7u=q--@iqjfahekwdaun%e_h"
-=======
 SECRET_KEY = os.environ.get('SECRET_KEY')
->>>>>>> d86d197 (Added management of environment variables)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -46,16 +43,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-<<<<<<< HEAD
     "main.apps.MainConfig",
-=======
     "django.contrib.sites",  # Required by allauth
     "main.apps.MainConfig",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
->>>>>>> d86d197 (Added management of environment variables)
 ]
 
 MIDDLEWARE = [
@@ -66,10 +60,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-<<<<<<< HEAD
-=======
     "allauth.account.middleware.AccountMiddleware",  # Added as required by allauth
->>>>>>> d86d197 (Added management of environment variables)
 ]
 
 ROOT_URLCONF = "Linkify.urls"
@@ -144,8 +135,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-<<<<<<< HEAD
-=======
 
 # Authentication backends
 AUTHENTICATION_BACKENDS = [
@@ -177,4 +166,3 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
->>>>>>> d86d197 (Added management of environment variables)
