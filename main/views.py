@@ -30,3 +30,6 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
+
+def index(request):
+    return render(request, 'index.html')
