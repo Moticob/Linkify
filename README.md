@@ -71,12 +71,54 @@ Start the Django development server:
 
 ```bash
 python manage.py runserver
-Access the Application
+```
+
+## Access the Application
+
 Navigate to http://127.0.0.1:8000 in your web browser to use Linkify.
 
-Project Structure
-css
+## API Documentation
+```
+Endpoints
+Shorten URL
+Endpoint: /shorten/
+Method: POST
+Request Body:
+json
 Copier le code
+{
+    "url": "http://example.com/very/long/url"
+}
+Response:
+json
+Copier le code
+{
+    "short_url": "http://short.url/xyz123"
+}
+Description: Converts a long URL into a short URL.
+Expand URL
+Endpoint: /expand/
+Method: POST
+Request Body:
+json
+Copier le code
+{
+    "short_url": "http://short.url/xyz123"
+}
+Response:
+json
+Copier le code
+{
+    "url": "http://example.com/very/long/url"
+}
+Description: Expands a short URL back into the original long URL.
+
+Authentication
+Endpoint: /auth/
+Method: GET
+Description: Initiates the OAuth 2.0 authentication process with Google.
+Project Structure
+
 linkify/
 ├── main/
 │   ├── templates/
@@ -111,11 +153,12 @@ def url_shortener(request):
         )
     except:
         return render(request, "url-shortener.html")
-Contributions
+```
+## Contributions
 Feel free to fork this repository and contribute via pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-License
+## License
 This project is licensed under the MIT License.
 
-Contact
+## Contact
 For any queries or suggestions, reach out to me at oussama.ed-derouach@outlook.com.
