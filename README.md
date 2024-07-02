@@ -161,4 +161,4 @@ Feel free to fork this repository and contribute via pull requests. For major ch
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries or suggestions, reach out to me at oussama.ed-derouach@outlook.com.
+For any queries or suggestions, reach out to me at .
